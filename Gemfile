@@ -7,6 +7,7 @@ gem "redis"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem "benchmark"
+gem "concurrent-ruby"
 group :development, :test do
   gem "rails-pry"
   gem "rubocop-rails-omakase", require: false

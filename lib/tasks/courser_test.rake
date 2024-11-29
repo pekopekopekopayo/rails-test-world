@@ -2,6 +2,11 @@ namespace :courser_test do
   desc "전체 성능 테스트"
   task all_tests: :environment do
     require "benchmark"
+    TestModel.delete_all
+    100.times do |i|
+      array = Array.new(100000) { |j| { id: j + i * 10000 } }
+      TestModel.insert_all(array)
+    end
 
     # OFFSET 심플테스트
     offset_simple_time = Benchmark.measure do
@@ -31,5 +36,7 @@ namespace :courser_test do
       end
     end
     puts "COURSER 퍼포먼스테스트 실행 시간: #{courser_performance_time.real} seconds"
+
+    TestModel.delete_all
   end
 end

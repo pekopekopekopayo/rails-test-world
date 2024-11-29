@@ -231,6 +231,7 @@ PLATFORMS
 DEPENDENCIES
   benchmark
   bootsnap
+  concurrent-ruby
   jbuilder
   pg (~> 1.1)
   puma (>= 5.0)
