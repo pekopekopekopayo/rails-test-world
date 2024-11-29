@@ -3,7 +3,7 @@ gem "rails", "~> 7.2.2"
 gem "pg", "~> 1.1"
 gem "puma", ">= 5.0"
 gem "jbuilder"
-# gem "redis", ">= 4.0.1"
+gem "redis"
 gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 gem "benchmark"

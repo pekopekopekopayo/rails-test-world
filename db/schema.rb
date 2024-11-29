@@ -15,5 +15,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_29_131722) do
   enable_extension "plpgsql"
 
   create_table "test_models", force: :cascade do |t|
+    t.integer "number", default: 0, null: false
   end
 end
